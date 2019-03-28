@@ -11,7 +11,7 @@ var input = process.argv;
 var search = process.argv[2];
 
 // this negates need for for loop below - but see if the for loop will work first
-var entry = input.slice(3).join(" "); 
+var entry = input.slice(3).join(" ");
 
 // entry is name of song, artist, movie, etc
 if (search === "concert-this") {
@@ -20,32 +20,32 @@ if (search === "concert-this") {
   songSearch(entry);
 } else if (search === "movie-this") {
   movieSearch(entry);
-} else if (search ==="do-what-it-says") {
+} else if (search === "do-what-it-says") {
   randomSearch(entry);
 }
-  
+
 function concertSearch(entry) {
-  
+
   var queryUrl = "https://rest.bandsintown.com/artists/" + entry + "/events?app_id=codingbootcamp";
-  
+
   axios.get(queryUrl).then(
-    
-    function(response) {
+
+    function (response) {
       concertGroupings = [];
       concertData = response.data;
-      
+
       for (let i = 0; i < concertData.length; i++) {
 
-      let concertInfo = [
-      "\n\nName of venue: " + concertData[i].venue.name,
-      "Venue location: " + concertData[i].venue.city + ", " + concertData[i].venue.country,
-      "Date of Event: " + (moment(concertData[i].datetime, "YYYY-MM-DD")).format("MM/DD/YYYY"),
-      ].join("\n");
-    
-      concertGroupings.push(concertInfo);
-    }
-    console.log(concertGroupings.join());
-  })
+        let concertInfo = [
+          "\n\nName of venue: " + concertData[i].venue.name,
+          "Venue location: " + concertData[i].venue.city + ", " + concertData[i].venue.country,
+          "Date of Event: " + (moment(concertData[i].datetime, "YYYY-MM-DD")).format("MM/DD/YYYY"),
+        ].join("\n");
+
+        concertGroupings.push(concertInfo);
+      }
+      console.log(concertGroupings.join());
+    })
 }
 
 function songSearch(entry) {
@@ -53,7 +53,7 @@ function songSearch(entry) {
     entry = "The Sign Ace of Base";
   }
   spotify
-    .search({ type: 'track', query: entry, limit: 3}, function(err, data) {
+    .search({ type: 'track', query: entry, limit: 3 }, function (err, data) {
       if (err) {
         return console.log("Error occured: " + err);
       }
@@ -67,14 +67,14 @@ function movieSearch(entry) {
   }
 
   var queryUrl = "https://www.omdbapi.com/?t=" + entry + "&y=&plot=short&apikey=trilogy";
-  
+
   axios.get(queryUrl).then(
-    
-    function(response) {
+
+    function (response) {
       movieGroup = [];
       movieData = response.data;
 
-        let movieInfo = [
+      let movieInfo = [
         "\nTitle: " + movieData.Title,
         "\nRelease Year: " + movieData.Year,
         "\nIMDB Rating: " + movieData.imdbRating,
@@ -83,12 +83,12 @@ function movieSearch(entry) {
         "\nLanguage: " + movieData.Language,
         "\nPlot: " + movieData.Plot,
         "\nActors: " + movieData.Actors,
-        ].join("\n");
-        
-        movieGroup.push(movieInfo);
-      
+      ].join("\n");
+
+      movieGroup.push(movieInfo);
+
       console.log(movieGroup.join());
-    })    
+    })
 }
 
 function randomSearch(entry) {
