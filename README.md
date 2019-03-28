@@ -7,13 +7,13 @@ LIRI stands for Language Interpretation and Recognition Interface. This is a LIR
 ## Languages / Technologies Used
 
 * Node
-*JavaScript
-*Moment
-*Spotify Node API
-*Bands In Town API
-*OMDB API
-*Axios
-*Dotenv
+* JavaScript
+* Moment
+* Spotify Node API
+* Bands In Town API
+* OMDB API
+* Axios
+* Dotenv
 
 ## What it does
 
