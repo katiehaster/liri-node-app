@@ -37,7 +37,7 @@ Use this "do-what-it-says" feature to have the app read from a text file to disp
 
 Since this is a command line app, as the user you will need to do the following: 
 * Clone the repo
-* ** Run `npm install` in your terminal **
+* Run `npm install` in your terminal
 * Create a .env file
 * Obtain spotify keys:
   *you'll need a **client id** and **client secret**:
