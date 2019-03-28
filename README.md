@@ -40,7 +40,8 @@ Since this is a command line app, as the user you will need to do the following:
 * Run `npm install` in your terminal
 * Create a .env file
 * Obtain spotify keys:
-  *you'll need a **client id** and **client secret**:
+  
+  -you'll need a **client id** and **client secret**:
 
    1. Step One: Visit <https://developer.spotify.com/my-applications/#!/>
 
