@@ -33,6 +33,23 @@ I love the film John Wick, but I can't remember what year it was made or who pla
 
 Use this "do-what-it-says" feature to have the app read from a text file to display a band, song, or movie.
 
+## User Instructions
+
+Since this is a command line app, as the user you will need to do the following: 
+* Clone the repo
+** Run `npm install` in your terminal **
+* Create a .env file
+* Obtain spotify keys:
+  *you'll need a **client id** and **client secret**:
+
+   1. Step One: Visit <https://developer.spotify.com/my-applications/#!/>
+
+   1. Step Two: Either login to your existing Spotify account or create a new one (a free account is fine) and log in.
+
+   1. Step Three: Once logged in, navigate to <https://developer.spotify.com/my-applications/#!/applications/create> to register a new application to be used with the Spotify API. You can fill in whatever you'd like for these fields. When finished, click the "complete" button.
+
+   1. Step Four: On the next screen, scroll down to where you see your client id and client secret. Copy these values down somewhere, you'll need them to use the Spotify API and the [node-spotify-api package](https://www.npmjs.com/package/node-spotify-api).
+
 ## Author
 Katie Haster
 
