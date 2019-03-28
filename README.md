@@ -6,7 +6,7 @@ LIRI stands for Language Interpretation and Recognition Interface. This is a LIR
 
 ## Languages / Technologies Used
 
-*Node
+* Node
 *JavaScript
 *Moment
 *Spotify Node API
