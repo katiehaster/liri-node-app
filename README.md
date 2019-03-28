@@ -15,7 +15,7 @@ LIRI stands for Language Interpretation and Recognition Interface. This is a LIR
 *Axios
 *Dotenv
 
-##What it does
+## What it does
 
 *Bands In Town
 Want to know when your favorite band is playing? Type into the module: node liri.js concert-this <your band here>, and the module will populate with your favorite band or solo artist's upcoming concert dates, complete with venues and locations.
@@ -29,9 +29,10 @@ I love the film John Wick, but I can't remember what year it was made or who pla
 *Random Feature
 Use this "do-what-it-says" feature to have the app read from a text file to display a band, song, or movie.
 
-##Authors
+## Author
 Katie Haster
 
+## View video walk through - 
 To see screencastify of the app in action, visit - https://drive.google.com/open?id=1XyG6IUfIbl8CPCroa2YI7YCNMwYxVP2V. There are two videos; select the LIRI Bot video.
 
 
